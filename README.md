@@ -46,6 +46,7 @@ Initial development is focused on implementing the core backend architecture.
 * **Database:** PostgreSQL
 * **Real-Time Updates:** WebSockets
 * **Containerization:** Docker
+* **Package manager:** uv
 
 The system will be designed with an **async backend architecture** to support concurrent users and real-time event updates.
 

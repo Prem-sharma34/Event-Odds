@@ -1,0 +1,15 @@
+pycache/
+*.py[cod]
+*$py.class
+
+
+
+.uv/
+.uv-cache/
+
+
+
+.venv/
+venv/
+env/
+ENV/
