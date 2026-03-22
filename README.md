@@ -50,22 +50,4 @@ Initial development is focused on implementing the core backend architecture.
 
 The system will be designed with an **async backend architecture** to support concurrent users and real-time event updates.
 
-## Project Goals
-
-EventOdds is primarily being developed as an engineering project to explore:
-
-* real-time backend systems
-* concurrency and transaction safety
-* WebSocket-based event broadcasting
-* scalable API design
-
-## Development Progress
-
-Current focus areas:
-
-* Event and participant data models
-* Prediction submission system
-* Transaction-safe voting logic
-* Real-time odds broadcasting
-
 Further updates will be added as development progresses.

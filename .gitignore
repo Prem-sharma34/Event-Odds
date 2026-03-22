@@ -13,3 +13,4 @@ pycache/
 venv/
 env/
 ENV/
+.env
