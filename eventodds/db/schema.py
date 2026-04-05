@@ -1,25 +1,14 @@
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship 
+from sqlalchemy.orm import Mapped, mapped_column, relationship 
 from sqlalchemy import String, Text, Integer, Boolean, DateTime, ForeignKey, UniqueConstraint 
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy import Enum as SAEnum
 from sqlalchemy.sql import func
-from dotenv import load_dotenv
 from typing import Optional
 import os
 import enum
 import uuid
-from sqlalchemy import create_engine
 from datetime import datetime
-
-
-load_dotenv()
-database_url = os.getenv('postgres_url')
-engine = create_engine(database_url)
-
-
-class Base(DeclarativeBase):
-    pass
-
+from eventodds.db.database import Base
 
 
 # --- Enums ---
@@ -55,7 +44,7 @@ class Users(Base):
     role: Mapped[UserRole] = mapped_column(SAEnum(UserRole), default=UserRole.user)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
-    # relationships — navigate without writing JOINs
+
     events: Mapped[list["Events"]] = relationship(back_populates="organizer")
     predictions: Mapped[list["Predictions"]] = relationship(back_populates="user")
 
