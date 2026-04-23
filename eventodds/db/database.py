@@ -1,8 +1,14 @@
 import os
-from sqlalchemy.orm import DeclarativeBase , sessionmaker
+from sqlalchemy import create_engine
+from sqlalchemy.orm import DeclarativeBase , sessionmaker 
 from eventodds.config import settings
 
+engine = create_engine(settings.DATABASE_URL)
 
+sessionLocal = sessionmaker(
+    bind = engine,
+    autoflush=False
+)
 class Base(DeclarativeBase):
     pass
 
