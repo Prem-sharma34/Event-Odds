@@ -1,0 +1,1 @@
+# this files is for authentication related routes like /login , /register , /logout
