@@ -14,3 +14,6 @@ venv/
 env/
 ENV/
 .env
+
+docs/
+how_docs/
